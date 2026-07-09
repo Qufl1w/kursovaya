@@ -3,7 +3,7 @@ import { Pool } from 'pg'
 import { courses, lessons } from './schema'
 
 const pool = new Pool({
-  connectionString: 'postgresql://admin:password123@localhost:5432/kursovaya',
+  connectionString: 'postgresql://admin:123@localhost:5432/kursovaya',
 })
 
 const db = drizzle(pool)

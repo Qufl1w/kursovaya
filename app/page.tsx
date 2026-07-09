@@ -1,3 +1,7 @@
+'use client';
+
+import Link from 'next/link';
+
 export default function HomePage() {
   return (
     <main style={{ background: '#0f0f0f', minHeight: '100vh', fontFamily: 'sans-serif' }}>
@@ -8,10 +12,10 @@ export default function HomePage() {
           <span style={{ fontSize: 16, fontWeight: 500, color: '#4ade80' }}>PolitaevJS</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-          <a href="/courses" style={{ fontSize: 16, color: '#888', textDecoration: 'none' }}>Курсы</a>
+          <Link href="/courses" style={{ fontSize: 16, color: '#888', textDecoration: 'none' }}>Курсы</Link>
           <a href="#" style={{ fontSize: 16, color: '#888', textDecoration: 'none' }}>О платформе</a>
-          <a href="/login" style={{ fontSize: 16, color: '#888', textDecoration: 'none' }}>Войти</a>
-          <a href="/register" style={{ fontSize: 16, color: '#0f0f0f', background: '#4ade80', padding: '6px 14px', borderRadius: 6, fontWeight: 500, textDecoration: 'none' }}>Начать</a>
+          <Link href="/login" style={{ fontSize: 16, color: '#888', textDecoration: 'none' }}>Войти</Link>
+          <Link href="/register" style={{ fontSize: 16, color: '#0f0f0f', background: '#4ade80', padding: '6px 14px', borderRadius: 6, fontWeight: 500, textDecoration: 'none' }}>Начать</Link>
         </div>
       </nav>
 
@@ -27,7 +31,7 @@ export default function HomePage() {
           Практические курсы по JavaScript, Node.js, Express и современному бэкенд-разработке
         </p>
         <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
-          <a href="/courses" style={{ background: '#4ade80', color: '#0f0f0f', fontSize: 16, fontWeight: 500, padding: '9px 20px', borderRadius: 7, textDecoration: 'none' }}>Смотреть курсы</a>
+          <Link href="/courses" style={{ background: '#4ade80', color: '#0f0f0f', fontSize: 16, fontWeight: 500, padding: '9px 20px', borderRadius: 7, textDecoration: 'none' }}>Смотреть курсы</Link>
           <a href="#" style={{ background: 'transparent', color: '#888', fontSize: 16, padding: '9px 20px', borderRadius: 7, border: '0.5px solid #2a2a2a', textDecoration: 'none' }}>Как это работает</a>
         </div>
       </section>
@@ -52,12 +56,12 @@ export default function HomePage() {
             { title: 'Node.js и Express', meta: '18 уроков · Средний', tag: 'Node' },
             { title: 'PostgreSQL и ORM', meta: '10 уроков · Средний', tag: 'SQL' },
           ].map((course) => (
-            <a href="/courses" key={course.title} style={{ background: '#141414', border: '0.5px solid #1e1e1e', borderRadius: 10, padding: 24, textDecoration: 'none', display: 'block' }}>
+            <Link href="/courses" key={course.title} style={{ background: '#141414', border: '0.5px solid #1e1e1e', borderRadius: 10, padding: 24, textDecoration: 'none', display: 'block' }}>
               <div style={{ width: 48, height: 48, background: '#1a2e1a', borderRadius: 8, marginBottom: 12 }} />
               <div style={{ fontSize: 20, fontWeight: 500, color: '#e0e0e0', marginBottom: 4 }}>{course.title}</div>
               <div style={{ fontSize: 14, color: '#555', marginBottom: 10 }}>{course.meta}</div>
               <span style={{ background: '#1a2e1a', color: '#4ade80', fontSize: 12, padding: '2px 8px', borderRadius: 4 }}>{course.tag}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
@@ -76,11 +80,11 @@ export default function HomePage() {
         }}>
           <span style={{ fontSize: 14, color: '#444' }}>PolitaevJS © 2025</span>
         </div>
-        <a href="/courses" style={{ 
+        <Link href="/courses" style={{ 
           fontSize: 16, 
           color: '#4ade80', 
           textDecoration: 'none'
-        }}>Все курсы →</a>
+        }}>Все курсы →</Link>
       </footer>
     </main>
   )
